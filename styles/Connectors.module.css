@@ -1,0 +1,41 @@
+.connectors {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.connector {
+  padding: 0.5rem 1rem;
+  border: 1px solid #c3c5cb;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  grid-auto-flow: column;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.connector label {
+  flex-grow: 1;
+  font-weight: 500;
+}
+
+.connector .status {
+  width: 1rem;
+  fill: red;
+}
+
+.connector .status.active {
+  fill: green;
+}
+
+@media (max-width: 727px) {
+  .connectors {
+    margin: 0 0 1rem;
+  }
+
+  .connector {
+    width: 360px;
+  }
+}
