@@ -51,6 +51,7 @@
     ]
   },
   "devDependencies": {
+    "buffer": "^6.0.3",
     "prettier": "^2.5.1"
   }
 }

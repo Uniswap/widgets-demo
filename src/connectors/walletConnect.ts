@@ -1,7 +1,14 @@
 import { initializeConnector } from '@web3-react/core'
 import { WalletConnect } from '@web3-react/walletconnect'
+import { Buffer } from 'buffer'
+
 import { JSON_RPC_URL } from '../constants'
 import { toWeb3Connector } from './utils'
+
+// WalletConnect relies on Buffer, so it must be polyfilled.
+if (!('Buffer' in window)) {
+  window.Buffer = Buffer
+}
 
 const connector = initializeConnector<WalletConnect>(
   (actions) =>
