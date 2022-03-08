@@ -2,9 +2,17 @@
   padding: 0 2rem;
 }
 
+.i18n {
+  align-items: center;
+  column-gap: 0.5rem;
+  display: flex;
+  height: 2rem;
+  justify-content: flex-end;
+}
+
 .main {
   min-height: 100vh;
-  padding: 2rem 0;
+  padding: 0 0 2rem;
   flex: 1;
   display: flex;
   flex-direction: column;

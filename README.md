@@ -38,15 +38,13 @@ For all available props (including theming), refer to the documentation at https
 
 ### Passing a provider
 
-This project uses [@web3-react](https://github.com/NoahZinsmeister/web3-react) to connect to an Ethereum Provider. See `components/Web3Connectors.tsx`.
+This project uses [@web3-react](https://github.com/NoahZinsmeister/web3-react) to connect to an Ethereum Provider. The demo uses both MetaMask and WalletConnect. See `src/components/Web3Connectors.tsx`.
 
-The `SwapWidget` component will accept any EIP1193 Provider or `@ethersproject` `Web3Provider`, so you are not limited to using `@web3-react`.
-
-If you _do_ use a `Web3Provider`, you can pass it in the same way, to the widget's `provider` prop.
+The `SwapWidget` component will accept any EIP1193 Provider or `@ethersproject` `Web3Provider`, so you are not limited to using `@web3-react`. If you _do_ use a `Web3Provider`, you can pass it in the same way, to the widget's `provider` prop.
 
 ### Localization
 
-The `SwapWidget` component will render in whichever supported locale is passed to the `locale` prop.
+The `SwapWidget` component will render in whichever supported locale is passed to the `locale` prop. The demo uses en-US, but includes a selector to demonstrate additional locales.
 
 ### Known issues with Create React App
 
