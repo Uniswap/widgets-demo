@@ -48,6 +48,15 @@ If you _do_ use a `Web3Provider`, you can pass it in the same way, to the widget
 
 The `SwapWidget` component will render in whichever supported locale is passed to the `locale` prop.
 
+### Known issues with Create React App
+
+- Many dependencies have not updated to support sourcemaps for CRA. To get around this, you can disable sourcemaps by setting GENERATE_SOURCEMAP=false, either when you run the script or in your .env file.
+
+- CRAv4 must use different import path for fonts. To import the widget using CRAv4:
+
+      import { SwapWidget } from '@uniswap/widgets/index.js'
+      import '@uniswap/widgets/dist/fonts.css'
+
 ### Additional documentation
 
 - [What is Uniswap](https://docs.uniwap.org/)
