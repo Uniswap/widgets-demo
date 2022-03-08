@@ -1427,10 +1427,10 @@
     "@uniswap/v3-core" "1.0.0"
     "@uniswap/v3-periphery" "^1.0.1"
 
-"@uniswap/widgets@^0.0.21-beta":
-  version "0.0.21-beta"
-  resolved "https://registry.yarnpkg.com/@uniswap/widgets/-/widgets-0.0.21-beta.tgz#080bc3c0577c67ed095b3f15edc15ab834b0bbc4"
-  integrity sha512-YvlgD+dUvNyLW3Zcyei+8oWKxSJhse1A6fPt4jKJi+V4FQVd6D8eoKt1iKFOkxyGa/S2IanfZlg3GItU4EonyA==
+"@uniswap/widgets@^0.0.22-beta":
+  version "0.0.22-beta"
+  resolved "https://registry.yarnpkg.com/@uniswap/widgets/-/widgets-0.0.22-beta.tgz#d759a6014c51ff8d6eddbc98fa261d54459c8099"
+  integrity sha512-VY7n1FruIIcR9FO3i6zkgLnhXOFul0MWD6oN5eyP3BLcQvz7ySYD4HiSFf9d0RHHuV++33ggY1sbmxULYrlnfA==
   dependencies:
     "@babel/runtime" "^7.17.0"
     "@ethersproject/abi" "^5.4.1"
