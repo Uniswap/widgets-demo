@@ -1,0 +1,69 @@
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 2rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.demo {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 2rem 0;
+  gap: 1rem;
+}
+
+.connectors {
+  align-self: flex-start;
+  border-radius: 1em;
+}
+
+@keyframes spotlight {
+  10% {
+    background-color: #e2e3e9;
+  }
+  20% {
+    background-color: #e2e3e9;
+  }
+}
+
+.connectors:focus {
+  animation: 2.5s ease-out 1 spotlight;
+}
+
+.widget {
+  background-color: #f7f8fa;
+  border-radius: 1rem;
+  height: 356px;
+  width: 360px;
+}
+
+.rule {
+  border: 1px solid #c3c5cb;
+  margin: 0;
+  width: calc(100% - 2rem);
+  max-width: 664px;
+}
+
+@media (max-width: 727px) {
+  .demo {
+    flex-direction: column;
+  }
+
+  .connectors {
+    align-self: center;
+  }
+}
