@@ -1,16 +1,17 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import { SwapWidget } from '@uniswap/widgets'
+import { FiGlobe } from 'react-icons/fi'
+import { SupportedLocale, SUPPORTED_LOCALES, SwapWidget } from '@uniswap/widgets'
 
 // ↓↓↓ Don't forget to import the widgets' fonts! ↓↓↓
 import '@uniswap/widgets/fonts.css'
 // ↑↑↑
 
+import styles from '../styles/Home.module.css'
 import DocumentationCards from '../components/DocumentationCards'
 import Web3Connectors from '../components/Web3Connectors'
 import { useActiveProvider } from '../connectors'
-import { useCallback, useRef } from 'react'
+import { useCallback, useRef, useState } from 'react'
 import { JSON_RPC_URL } from '../constants'
 
 const TOKEN_LIST = 'https://gateway.ipfs.io/ipns/tokens.uniswap.org'
@@ -25,6 +26,11 @@ const Home: NextPage = () => {
   // This is a Web3Provider (from @ethersproject) supplied by @web3-react; see ./connectors.ts.
   const provider = useActiveProvider()
 
+  // The locale to pass to the SwapWidget.
+  // This is a value from the SUPPORTED_LOCALES exported by @uniswap/widgets.
+  const [locale, setLocale] = useState<SupportedLocale>('en-US')
+  const onSelectLocale = useCallback((e) => setLocale(e.target.value), [])
+
   return (
     <div className={styles.container}>
       <Head>
@@ -32,6 +38,19 @@ const Home: NextPage = () => {
         <meta name="description" content="Uniswap Widgets" />
         <link rel="icon" href="https://app.uniswap.org/favicon.png" />
       </Head>
+
+      <div className={styles.i18n}>
+        <label style={{ display: 'flex' }}>
+          <FiGlobe />
+        </label>
+        <select onChange={onSelectLocale}>
+          {SUPPORTED_LOCALES.map((locale) => (
+            <option key={locale} value={locale}>
+              {locale}
+            </option>
+          ))}
+        </select>
+      </div>
 
       <main className={styles.main}>
         <h1 className={styles.title}>Uniswap Swap Widget</h1>
@@ -46,7 +65,7 @@ const Home: NextPage = () => {
               jsonRpcEndpoint={JSON_RPC_URL}
               tokenList={TOKEN_LIST}
               provider={provider}
-              locale="en-US"
+              locale={locale}
               onConnectWallet={focusConnectors}
               defaultInputTokenAddress="NATIVE"
               defaultInputAmount="1"
