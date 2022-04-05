@@ -1,5 +1,5 @@
 import styles from '../styles/Connectors.module.css'
-import { connectors, Web3Connector } from '../connectors'
+import { connectors, getConnectorName, Web3Connector } from '../connectors'
 import { useCallback } from 'react'
 
 function Connector({ web3Connector }: { web3Connector: Web3Connector }) {
@@ -16,7 +16,7 @@ function Connector({ web3Connector }: { web3Connector: Web3Connector }) {
 
   return (
     <div className={styles.connector}>
-      <label>{connector.constructor.name}</label>
+      <label>{getConnectorName(connector)}</label>
       <button onClick={onClick}>{isActive ? 'Disconnect' : 'Connect'}</button>
       <svg className={[styles.status, isActive && styles.active].join(' ')} viewBox="0 0 2 2">
         <circle cx={1} cy={1} r={1} />
