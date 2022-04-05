@@ -22,9 +22,9 @@ Navigate to [http://localhost:3000](http://localhost:3000) to see the widget.
 
 The `SwapWidget` component is passed everything it needs to render:
 
-- `jsonRpcEndpoint`: a JSON-RPC endpoint, in this case "https://cloudflare-eth.com"
-- `tokenList`: a TokenList, in this case "https://gateway.ipfs.io/ipns/tokens.uniswap.org"
-- `provider`: an EIP1193 Provider, or an `@ethersproject` `Web3Provider`, in this case from `connectors.ts`
+- `jsonRpcEndpoint`: a JSON-RPC endpoint, or an `@ethersproject` `JsonRpcProvider`; in this case "https://cloudflare-eth.com"
+- `tokenList`: a TokenList; in this case "https://gateway.ipfs.io/ipns/tokens.uniswap.org"
+- `provider`: an EIP1193 Provider, or an `@ethersproject` `JsonRpcProvider`; in this case from `connectors.ts`
 
 In addition, it is passed these optional props to flesh out the demo:
 
@@ -40,7 +40,7 @@ For all available props (including theming), refer to the documentation at https
 
 This project uses [@web3-react](https://github.com/NoahZinsmeister/web3-react) to connect to an Ethereum Provider. The demo uses both MetaMask and WalletConnect. See `components/Web3Connectors.tsx`.
 
-The `SwapWidget` component will accept any EIP1193 Provider or `@ethersproject` `Web3Provider`, so you are not limited to using `@web3-react`. If you _do_ use a `Web3Provider`, you can pass it in the same way, to the widget's `provider` prop.
+The `SwapWidget` component will accept any EIP1193 Provider or `@ethersproject` `JsonRpcProvider`, so you are not limited to using `@web3-react`. If you _do_ use a `JsonRpcProvider`, you can pass it in the same way, to the widget's `provider` prop.
 
 ### Localization
 
