@@ -1,6 +1,6 @@
 {
   "name": "widgets-demo",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "react": "17.0.2",
@@ -8,6 +8,6 @@
     "react-redux": "^7.2.6"
   },
   "devDependencies": {
-    "@uniswap/widgets": "^0.0.21-beta"
+    "@uniswap/widgets": "^1.0.0"
   }
 }

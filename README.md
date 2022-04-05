@@ -1,4 +1,6 @@
-This is a demo project to showcase how to integrate the @uniswap/widgets package in your own projects:
+This is a demo project showcasing how to integrate the @uniswap/widgets package into your own projects.
+It has separate branches for using [nextjs](../../tree/nextjs) or [create-react-app](../../tree/cra):
+
 - Using [nextjs](../../tree/nextjs)
 - Using [create-react-app](../../tree/cra)
 
