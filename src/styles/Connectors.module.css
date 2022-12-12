@@ -15,6 +15,10 @@
   align-items: center;
   column-gap: 1rem;
   background-color: #c3c5cb;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .connector label {
