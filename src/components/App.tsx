@@ -12,7 +12,7 @@ import DocumentationCards from './DocumentationCards'
 import Web3Connectors from './Web3Connectors'
 import styles from '../styles/Home.module.css'
 
-const TOKEN_LIST = 'https://gateway.ipfs.io/ipns/tokens.uniswap.org'
+const TOKEN_LIST = 'https://tokens.uniswap.org/'
 const UNI = '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984'
 
 export default function App() {
@@ -45,7 +45,7 @@ export default function App() {
       </div>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Uniswap Swap Widget</h1>
+        <h1 className={styles.title}>Techno Populism</h1>
 
         <div className={styles.demo}>
           <div className={styles.connectors} ref={connectors} tabIndex={-1}>
@@ -66,9 +66,6 @@ export default function App() {
           </div>
         </div>
 
-        <hr className={styles.rule} />
-
-        <DocumentationCards />
       </main>
     </div>
   )

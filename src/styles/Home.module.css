@@ -18,12 +18,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #000000  ;
 }
 
 .title {
   margin: 0;
   font-size: 32px;
   font-weight: 600;
+  color: #e2e3e9;
 }
 
 .demo {
@@ -53,7 +55,7 @@
 }
 
 .widget {
-  background-color: #f7f8fa;
+  background-color: #e2e3e9;
   border-radius: 1rem;
   height: 356px;
   width: 360px;
