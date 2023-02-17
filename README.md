@@ -9,10 +9,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 To start the demo:
 
 ```bash
-yarn        # install dependencies
+yarn install       # install dependencies
 yarn dev    # run the development server
 # or
-npm         # install dependencies
+npm install       # install dependencies
 npm run dev # run the development server
 ```
 
