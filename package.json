@@ -12,7 +12,9 @@
     "next": "12.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-redux": "^7.2.6"
+    "react-redux": "^7.2.6",
+    "immer": "^9.0.19",
+    "jotai-immer": "^0.2.0"
   },
   "devDependencies": {
     "@ethersproject/providers": "^5.5.1",
