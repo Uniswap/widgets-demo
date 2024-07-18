@@ -54,6 +54,15 @@ The `SwapWidget` component will render in whichever supported locale is passed t
 
       import { SwapWidget } from '@uniswap/widgets/index.js'
       import '@uniswap/widgets/dist/fonts.css'
+- When using with `vite`, you need to include folowwing polyfills in `vite.config`:
+
+      resolve: {
+            alias: {
+              jsbi: path.resolve(__dirname, "./node_modules/jsbi/dist/jsbi-cjs.js"),
+              "~@fontsource/ibm-plex-mono": "@fontsource/ibm-plex-mono",
+              "~@fontsource/inter": "@fontsource/inter",
+            },
+          },
 
 ### Additional documentation
 
